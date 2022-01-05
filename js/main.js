@@ -272,4 +272,4 @@ setTimeout(function() {
     video.load();
     video.play();
 
-}, 700000);
+}, 70000);

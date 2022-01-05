@@ -1009,7 +1009,7 @@ ol {
 
 .main-banner .caption {
     position: absolute;
-    top: 50%;
+    margin-top: 44%;
     transform: translateY(-50%);
 }
 
@@ -1018,18 +1018,19 @@ ol {
     font-size: 15px;
     text-transform: uppercase;
     font-weight: 600;
-    color: #fff;
+    color: #32cd34;
     letter-spacing: 1px;
 }
 
 .main-banner .caption h2 {
     margin-top: 20px;
     margin-bottom: 20px;
-    font-size: 36px;
+    font-size: 46px;
     text-transform: uppercase;
     font-weight: 800;
     color: #fff;
     letter-spacing: 1px;
+    font-family: Florence, cursive;
 }
 
 .main-banner .caption h2 em {
@@ -1040,12 +1041,27 @@ ol {
 
 .main-banner .caption p {
     color: #fff;
-    font-size: 14px;
+    font-size: 16px;
     max-width: 570px;
 }
 
 .main-banner .caption .main-button-red {
     margin-top: 30px;
+}
+
+.main-banner .caption .main-button-red a {
+    border: 1px solid #32cd34;
+    background: #32cd34;
+    color: white;
+    padding: 1rem;
+    font-size: 20px;
+    border-radius: 10px
+}
+
+.main-banner .caption .main-button-red a:hover {
+    border: 1px solid #313331;
+    background: #313331;
+    color: white;
 }
 
 @media screen and (max-width: 767px) {
