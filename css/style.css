@@ -1079,35 +1079,23 @@ ol {
 -----------------------*/
 
 .banner-section {
-    padding: 80px 50px;
+    padding: 45px 50px;
 }
 
 .single-banner {
     position: relative;
     z-index: 1;
+    padding: 3rem;
 }
 
-.single-banner:hover::before {
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
+.single-banner:hover {
+    box-shadow: 7px 4px 6px rgb(46, 45, 45)
 }
 
 .single-banner::before {
-    position: absolute;
-    left: 35px;
-    top: 30px;
-    border: 13px solid #ffffff;
-    content: "";
-    opacity: 0.3;
-    width: calc(100% - 70px);
-    height: calc(100% - 60px);
-    -webkit-transform: scale(0);
-    -ms-transform: scale(0);
-    transform: scale(0);
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
 }
 
 .single-banner img {
@@ -1137,6 +1125,15 @@ ol {
     padding: 11px 28px;
     background: #ffffff;
     border-radius: 2px;
+}
+
+
+/* Banner-section tu lam */
+
+.faq-single img {
+    min-width: 100%;
+    object-fit: cover;
+    aspect-ratio: 1/.7;
 }
 
 
@@ -1680,6 +1677,7 @@ ol {
 .instagram-box .main-instagram .item .ins-inner-box img {
     object-fit: cover;
     aspect-ratio: 1/.7;
+    height: 233px;
 }
 
 
@@ -1891,6 +1889,30 @@ ol {
 .footer-widget ul li a:hover {
     border: 1px solid #ADFF2F;
     background: #ADFF2F
+}
+
+#toTop {
+    display: none;
+    text-decoration: none;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    overflow: hidden;
+    width: 48px;
+    height: 48px;
+    border: none;
+    text-indent: 100%;
+    background: url(../img/arrow_up.png) no-repeat right top;
+}
+
+#toTopHover {
+    width: 48px;
+    height: 48px;
+    display: block;
+    overflow: hidden;
+    float: right;
+    opacity: 0;
+    filter: alpha(opacity=0)
 }
 
 .news-latter-item h5 {
@@ -4018,7 +4040,7 @@ ol {
 -----------------------*/
 
 .faq-section {
-    padding-top: 80px;
+    padding-top: 0;
     padding-bottom: 54px;
 }
 
@@ -4037,16 +4059,57 @@ ol {
 .faq-accordin .card .card-heading a {
     padding-left: 42px;
     display: block;
+    background: #c7c5c6;
 }
 
 .faq-accordin .card .card-body {
     padding: 0;
     padding-top: 13px;
     padding-bottom: 10px;
+    display: flex;
+}
+
+.faq-section .faq-accordin .accordion div.card:nth-child(3) .collapse .card {
+    background: rgb(248, 151, 63)
 }
 
 .faq-accordin .card .card-body p {
     margin-bottom: 0;
+    /* text-align: center; */
+    font-size: 16px;
+    text-transform: capitalize;
+    padding: 1px 1px 39px 37px;
+    color: black
+}
+
+.faq-accordin .card .card-body p.card-text {
+    color: black;
+    margin: 1rem 0 !important;
+    font-size: 18px
+}
+
+.faq-accordin .card h5.card-title {
+    color: red;
+    margin: 0rem 0rem -4rem 10rem;
+    font-size: 39px;
+}
+
+.faq-accordin .card .card-body p span {
+    color: #8B0000;
+    text-transform: capitalize;
+}
+
+.faq-accordin .card .card-body p span.item {
+    margin: 1rem 1rem 1rem 4rem
+}
+
+.faq-accordin .card .card-body p a:hover {
+    color: red !important;
+}
+
+.faq-accordin .card .card-body img {
+    width: 30%;
+    height: 20%;
 }
 
 .faq-accordin .card-heading a:after,
@@ -4554,6 +4617,14 @@ ol {
     }
     .checkout-content input {
         margin-top: 50px;
+    }
+    .faq-accordin .card .card-body p img {
+        width: 27%;
+        height: 8%
+    }
+    .faq-accordin .card .card-body p span.item {
+        margin: 1rem 1rem 1rem 1rem;
+        font-size: 15px;
     }
 }
 
