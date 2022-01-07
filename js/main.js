@@ -144,7 +144,7 @@
     /* let timerdate = "2020/01/01"; */
 
     $("#countdown").countdown(timerdate, function(event) {
-        $(this).html(event.strftime("<div class='cd-item'><span>%H</span> <p>Hrs</p> </div>" + "<div class='cd-item'><span>%M</span> <p>Mins</p> </div>" + "<div class='cd-item'><span>%S</span> <p>Secs</p> </div>"));
+        $(this).html(event.strftime("<div class='cd-item'><span>%H</span> <p>Giờ</p> </div>" + "<div class='cd-item'><span>%M</span> <p>Phút</p> </div>" + "<div class='cd-item'><span>%S</span> <p>Giây</p> </div>"));
     });
 
 
@@ -272,4 +272,37 @@ setTimeout(function() {
     video.load();
     video.play();
 
-}, 700000);
+}, 70000);
+
+btn.onclick = e => vid.play();
+btn_btn.onclick = e => vid.pause();
+btn_1.onclick = e => vid_1.play();
+btn_btn_1.onclick = e => vid_1.pause();
+/* ..............................................
+	   Owl Carousel Instagram Feed
+	   ................................................. */
+
+$('.main-instagram').owlCarousel({
+    loop: true,
+    margin: 0,
+    dots: false,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true,
+    navText: ["<i class='ti-arrow-left'></i>", "<i class='ti-arrow-right'></i>"],
+    responsive: {
+        0: {
+            items: 2,
+            nav: true
+        },
+        600: {
+            items: 3,
+            nav: true
+        },
+        1000: {
+            items: 5,
+            nav: true,
+            loop: true
+        }
+    }
+});

@@ -40,7 +40,7 @@ body {
     height: 100%;
     font-family: "Muli", sans-serif;
     -webkit-font-smoothing: antialiased;
-    font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 h1,
@@ -342,8 +342,6 @@ ol {
 }
 
 .header-top {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     border-bottom: 1px solid #e5e5e5;
 }
@@ -385,7 +383,6 @@ ol {
 }
 
 .header-top .ht-right .login-panel {
-    float: right;
     font-size: 14px;
     color: #252525;
     display: inline-block;
@@ -1009,7 +1006,7 @@ ol {
 
 .main-banner .caption {
     position: absolute;
-    top: 50%;
+    margin-top: 44%;
     transform: translateY(-50%);
 }
 
@@ -1018,18 +1015,19 @@ ol {
     font-size: 15px;
     text-transform: uppercase;
     font-weight: 600;
-    color: #fff;
+    color: #32cd34;
     letter-spacing: 1px;
 }
 
 .main-banner .caption h2 {
     margin-top: 20px;
     margin-bottom: 20px;
-    font-size: 36px;
+    font-size: 46px;
     text-transform: uppercase;
     font-weight: 800;
     color: #fff;
     letter-spacing: 1px;
+    font-family: Florence, cursive;
 }
 
 .main-banner .caption h2 em {
@@ -1040,12 +1038,27 @@ ol {
 
 .main-banner .caption p {
     color: #fff;
-    font-size: 14px;
+    font-size: 16px;
     max-width: 570px;
 }
 
 .main-banner .caption .main-button-red {
     margin-top: 30px;
+}
+
+.main-banner .caption .main-button-red a {
+    border: 1px solid #32cd34;
+    background: #32cd34;
+    color: white;
+    padding: 1rem;
+    font-size: 20px;
+    border-radius: 10px
+}
+
+.main-banner .caption .main-button-red a:hover {
+    border: 1px solid #313331;
+    background: #313331;
+    color: white;
 }
 
 @media screen and (max-width: 767px) {
@@ -1530,6 +1543,11 @@ ol {
     top: 0px !important;
 }
 
+.latest-blog .row .blog-box .blog-img img {
+    object-fit: cover;
+    aspect-ratio: 1/.7;
+}
+
 
 /*---------------------
   Man Banner
@@ -1543,70 +1561,131 @@ ol {
 }
 
 
-/*---------------------
-  Instagram Photo
------------------------*/
+/* ===========
+  Start Instagram Tu Lam 
+ =============*/
 
-.instagram-photo {
-    overflow: hidden;
-}
-
-.instagram-photo .insta-item {
-    float: left;
-    width: 16.66%;
-    height: 320px;
-    text-align: center;
+.instagram-box {
+    padding: 70px 0px;
+    background: white;
+    background-size: auto auto;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     position: relative;
 }
 
-.instagram-photo .insta-item:hover:before {
-    opacity: 1;
-}
-
-.instagram-photo .insta-item:hover .inside-text {
-    opacity: 1;
-    visibility: visible;
-    z-index: 99;
-}
-
-.instagram-photo .insta-item:before {
-    position: absolute;
-    left: 0;
-    top: 0;
+.instagram-box::before {
+    background: rgba(0, 0, 0, 0.9);
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.3);
+    left: 0px;
+    top: 0px;
     content: "";
-    opacity: 0;
-    -webkit-transition: all 0.3s;
-    -webkit-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s;
+    position: absolute;
+    z-index: 0;
 }
 
-.instagram-photo .insta-item .inside-text {
-    padding-top: 130px;
-    opacity: 0;
-    visibility: hidden;
+.main-instagram.owl-carousel .owl-nav button.owl-prev {
+    background: #000000;
+    position: absolute;
+    z-index: 1;
+    display: block;
+    height: 100%;
+    width: 50px;
+    line-height: 0px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #ffffff;
+    top: 0;
+    padding: 0;
+    margin-top: 0;
+    opacity: 1;
+    left: 0px;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.main-instagram.owl-carousel .owl-nav button.owl-next {
+    background: #000000;
+    position: absolute;
+    z-index: 1;
+    display: block;
+    height: 100%;
+    width: 50px;
+    line-height: 0px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #ffffff;
+    top: 0;
+    padding: 0;
+    margin-top: 0;
+    opacity: 1;
+    right: 0px;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.main-instagram.owl-carousel .owl-nav button.owl-next:hover,
+.main-instagram.owl-carousel .owl-nav button.owl-prev:hover {
+    background: #b0b435;
+}
+
+.ins-inner-box {
     position: relative;
-    -webkit-transition: all 0.3s;
-    -webkit-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s;
 }
 
-.instagram-photo .insta-item .inside-text i {
-    font-size: 30px;
+.hov-in {
+    opacity: 0;
+    background: rgba(211, 59, 51, 0.5);
+    bottom: -100%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all 0.3s ease-out 0.5s;
+    -moz-transition: all 0.3s ease-out 0.5s;
+    -o-transition: all 0.3s ease-out 0.5s;
+    -ms-transition: all 0.3s ease-out 0.5s;
+    transition: all 0.3s ease-out 0.5s;
+    text-align: center;
+    display: table;
+}
+
+.hov-in a {
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+}
+
+.hov-in i {
+    color: #000000;
+    font-size: 48px;
+    position: relative;
+    z-index: 2;
+}
+
+.hov-in a i:hover {
     color: #ffffff;
 }
 
-.instagram-photo .insta-item .inside-text h5 {
-    margin-top: 14px;
+.ins-inner-box:hover .hov-in {
+    bottom: 0;
+    opacity: 1;
 }
 
-.instagram-photo .insta-item .inside-text h5 a {
-    color: #ffffff;
+.instagram-box .main-instagram .item .ins-inner-box img {
+    object-fit: cover;
+    aspect-ratio: 1/.7;
 }
+
+
+/* ===========
+  End Instagram Tu Lam
+ =============*/
 
 
 /*---------------------
@@ -1693,6 +1772,7 @@ ol {
     margin-bottom: 0;
     color: #252525;
     line-height: 20px;
+    text-transform: capitalize
 }
 
 
@@ -1726,7 +1806,7 @@ ol {
 -----------------------*/
 
 .footer-section {
-    background: #191919;
+    background: rgb(253, 251, 223);
     padding-top: 75px;
 }
 
@@ -1744,7 +1824,7 @@ ol {
 
 .footer-left ul li {
     list-style: none;
-    color: #b2b2b2;
+    color: black;
     font-size: 16px;
     line-height: 30px;
 }
@@ -1758,7 +1838,7 @@ ol {
     height: 40px;
     width: 40px;
     background: #434445;
-    color: #ffffff;
+    color: #fff;
     text-align: center;
     line-height: 40px;
     border-radius: 50%;
@@ -1793,7 +1873,7 @@ ol {
 }
 
 .footer-widget h5 {
-    color: #ffffff;
+    color: black;
     font-weight: 700;
     margin-bottom: 26px;
 }
@@ -1805,26 +1885,31 @@ ol {
 .footer-widget ul li a {
     line-height: 36px;
     font-size: 16px;
-    color: #b2b2b2;
+    color: black;
 }
 
-.newslatter-item h5 {
-    color: #ffffff;
+.footer-widget ul li a:hover {
+    border: 1px solid #ADFF2F;
+    background: #ADFF2F
+}
+
+.news-latter-item h5 {
+    color: black;
     font-weight: 700;
     margin-bottom: 30px;
 }
 
-.newslatter-item p {
-    color: #b2b2b2;
+.news-latter-item p {
+    color: black;
     line-height: 26px;
 }
 
-.newslatter-item .subscribe-form {
+.news-latter-item .subscribe-form {
     position: relative;
 }
 
-.newslatter-item .subscribe-form input {
-    color: #b2b2b2;
+.news-latter-item .subscribe-form input {
+    color: #fff;
     background: #303030;
     width: 100%;
     height: 46px;
@@ -1833,27 +1918,27 @@ ol {
     padding-left: 20px;
 }
 
-.newslatter-item .subscribe-form input::-webkit-input-placeholder {
+.news-latter-item .subscribe-form input::-webkit-input-placeholder {
     color: #b2b2b2;
 }
 
-.newslatter-item .subscribe-form input::-moz-placeholder {
+.news-latter-item .subscribe-form input::-moz-placeholder {
     color: #b2b2b2;
 }
 
-.newslatter-item .subscribe-form input:-ms-input-placeholder {
+.news-latter-item .subscribe-form input:-ms-input-placeholder {
     color: #b2b2b2;
 }
 
-.newslatter-item .subscribe-form input::-ms-input-placeholder {
+.news-latter-item .subscribe-form input::-ms-input-placeholder {
     color: #b2b2b2;
 }
 
-.newslatter-item .subscribe-form input::placeholder {
+.news-latter-item .subscribe-form input::placeholder {
     color: #b2b2b2;
 }
 
-.newslatter-item .subscribe-form button {
+.news-latter-item .subscribe-form button {
     display: inline-block;
     color: #ffffff;
     background: #e7ab3c;
@@ -1877,11 +1962,11 @@ ol {
 .copyright-reserved .copyright-text {
     float: left;
     font-size: 16px;
-    color: #b2b2b2;
+    color: black;
 }
 
 .copyright-reserved .copyright-text a {
-    color: #b2b2b2;
+    color: black;
 }
 
 .copyright-reserved .copyright-text i {
