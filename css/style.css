@@ -1293,6 +1293,8 @@ ol {
 
 .product-item .pi-pic img {
     min-width: 100%;
+    object-fit: cover;
+    aspect-ratio: 1/.7;
 }
 
 .product-item .pi-pic .sale {
@@ -1779,7 +1781,7 @@ ol {
 -----------------------*/
 
 .partner-logo {
-    background: #303030;
+    background: #fbfbfb;
     padding: 38px 0;
 }
 
@@ -1796,6 +1798,8 @@ ol {
 .owl-carousel .owl-item img {
     display: block;
     width: auto;
+    object-fit: cover;
+    aspect-ratio: 1/.7;
 }
 
 
@@ -2073,6 +2077,15 @@ ol {
     color: #636363;
     font-size: 16px;
     line-height: 39px;
+    cursor: pointer;
+}
+
+.filter-widget .filter-catagories li a.active {
+    color: red
+}
+
+.filter-widget .filter-catagories li a:hover {
+    color: red
 }
 
 .filter-widget .fw-brand-check .bc-item {
@@ -2207,7 +2220,7 @@ ol {
 .filter-widget .fw-color-choose .cs-item label {
     cursor: pointer;
     position: relative;
-    padding-left: 33px;
+    padding-left: 25px;
     font-size: 16px;
     color: #636363;
 }
@@ -2564,7 +2577,7 @@ ol {
     background: #252525;
     border-radius: 50%;
     cursor: pointer;
-    margin-bottom: 0;
+    margin: 1px 1px 1px 1px;
 }
 
 .product-details .pd-color .pd-color-choose .cc-item label.cc-yellow {

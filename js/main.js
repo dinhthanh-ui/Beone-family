@@ -90,8 +90,8 @@
         nav: false,
         items: 5,
         dots: false,
-        navText: ['<i class="ti-angle-left"></i>', '<i class="ti-angle-right"></i>'],
-        smartSpeed: 1200,
+        navText: ["<i class='ti-arrow-left'></i>", "<i class='ti-arrow-right'></i>"],
+        smartSpeed: 2200,
         autoHeight: false,
         mouseDrag: false,
         autoplay: true,
@@ -230,54 +230,29 @@
     /*-------------------
 		Quantity change
 	--------------------- */
-    let proQty = $('.pro-qty');
-    proQty.prepend('<span class="dec qtybtn">-</span>');
-    proQty.append('<span class="inc qtybtn">+</span>');
-    proQty.on('click', '.qtybtn', function() {
-        let $button = $(this);
-        let oldValue = $button.parent().find('input').val();
-        if ($button.hasClass('inc')) {
-            let newVal = parseFloat(oldValue) + 1;
-        } else {
-            // Don't allow decrementing below zero
-            if (oldValue > 0) {
-                let newVal = parseFloat(oldValue) - 1;
-            } else {
-                newVal = 0;
-            }
-        }
-        $button.parent().find('input').val(newVal);
-    });
+    // let proQty = $('.pro-qty');
+    // let newVal = parseFloat('Value');
+    // proQty.prepend('<span class="dec qtybtn">-</span>');
+    // proQty.append('<span class="inc qtybtn">+</span>');
+    // proQty.on('click', '.qtybtn', function() {
+    //     let $button = $(this);
+    //     let oldValue = $button.parent().find('input').val();
+    //     if ($button.hasClass('inc')) {
+    //         newVal + 1;
+    //     } else {
+    //         // Don't allow decrementing below zero
+    //         if (oldValue > 0) {
+    //             newVal - 1;
+    //         } else {
+    //             newVal = 0;
+    //         }
+    //     }
+    //     $button.parent().find('input').val(newVal);
+    // });
 
 })(jQuery);
 
-// JavaScript
 
-
-var video = document.getElementById('bg-video');
-var source = document.createElement('source');
-
-source.setAttribute('src', 'img/beone-video.mp4');
-source.setAttribute('type', 'video/mp4');
-
-video.appendChild(source);
-video.play();
-
-setTimeout(function() {
-    video.pause();
-
-    source.setAttribute('src', 'img/vtv3 Beone.mp4');
-    source.setAttribute('type', 'video/mp4');
-
-    video.load();
-    video.play();
-
-}, 70000);
-
-btn.onclick = e => vid.play();
-btn_btn.onclick = e => vid.pause();
-btn_1.onclick = e => vid_1.play();
-btn_btn_1.onclick = e => vid_1.pause();
 /* ..............................................
 	   Owl Carousel Instagram Feed
 	   ................................................. */
@@ -306,3 +281,5 @@ $('.main-instagram').owlCarousel({
         }
     }
 });
+
+/*=============== javaScrip ===============*/
